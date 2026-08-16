@@ -7,6 +7,7 @@ import { OrderList } from '../interfaces/orderlist';
 
 import { HttpClient } from '@angular/common/http'
 import { User } from '../interfaces/user';
+import { environment } from '../../environments/environment';
 
 
 @Injectable({
@@ -14,7 +15,7 @@ import { User } from '../interfaces/user';
 })
 export class FoodService {
 
-  url = 'http://localhost:6789/orders';  
+  url = `${environment.apiUrl}/orders`;
   
   listItems: Food[] = [];
   selectedAttribute:  SelectedFoodAttribute[] = [];
